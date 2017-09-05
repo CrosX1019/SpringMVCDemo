@@ -1,7 +1,7 @@
 package com.gaussic.model;
 
 import javax.persistence.*;
-import java.util.Date;
+import java.sql.Date;
 
 @Entity
 @Table(name = "blog", schema = "springdemo", catalog = "")
@@ -62,9 +62,7 @@ public class BlogEntity {
         if (id != that.id) return false;
         if (title != null ? !title.equals(that.title) : that.title != null) return false;
         if (content != null ? !content.equals(that.content) : that.content != null) return false;
-        if (pubDate != null ? !pubDate.equals(that.pubDate) : that.pubDate != null) return false;
-
-        return true;
+        return pubDate != null ? pubDate.equals(that.pubDate) : that.pubDate == null;
     }
 
     @Override

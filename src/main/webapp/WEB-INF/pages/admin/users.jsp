@@ -29,7 +29,9 @@
     <!-- 如果用户列表为空 -->
     <c:if test="${empty userList}">
         <div class="alert alert-warning" role="alert">
-            <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>User表为空，请<a href="/admin/users/add" type="button" class="btn btn-primary btn-sm">添加</a>
+            <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>User表为空，请<a href="/admin/users/add"
+                                                                                              type="button"
+                                                                                              class="btn btn-primary btn-sm">添加</a>
         </div>
     </c:if>
 
@@ -54,6 +56,19 @@
                         <a href="/admin/users/show/${user.id}" type="button" class="btn btn-sm btn-success">详情</a>
                         <a href="/admin/users/update/${user.id}" type="button" class="btn btn-sm btn-warning">修改</a>
                         <a href="/admin/users/delete/${user.id}" type="button" class="btn btn-sm btn-danger">删除</a>
+                            <%--<a href="/admin/users/delete/${user.id}" type="button" class="btn btn-sm btn-danger"--%>
+                            <%--onclick="javascript:user_delete()">删除</a>--%>
+                            <%--<SCRIPT LANGUAGE="JavaScript">--%>
+                            <%--function user_delete() {--%>
+                            <%--var msg = "是否删除？";--%>
+                            <%--if (confirm(msg) == true) {--%>
+                            <%--return true;--%>
+                            <%--} else {--%>
+                            <%--return false;--%>
+                            <%--}--%>
+                            <%--}--%>
+
+                            <%--</SCRIPT>--%>
                     </td>
                 </tr>
             </c:forEach>
